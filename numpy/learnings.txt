@@ -81,89 +81,291 @@ Features of Numpy -
 
   An N-dimensional array is a data structure that stores elements in N dimensions (or axes) instead of just one or two.
 
-You can think of it as a generalization of 1D and 2D arrays.
 
-⸻
+1️⃣ Creating Arrays using np.array
 
-1️⃣ 1D Array (1-Dimensional)
-
-A simple list of elements.
-
-Example:
-
-[1, 2, 3, 4]
-
-Indexing:
-
-arr[0], arr[1], arr[2] ...
-
-Used for: lists, sequences, vectors.
-
-⸻
-
-2️⃣ 2D Array (2-Dimensional)
-
-An array of arrays (rows and columns) → like a matrix.
-
-Example:
-
-[[1, 2, 3],[4, 5, 6]]
-
-Indexing:
-
-arr[0][1] → 2
-
-Used for: tables, grids, matrices, images (height × width).
-
-⸻
-
-3️⃣ 3D Array (3-Dimensional)
-
-An array of 2D arrays → like a cube.
-
-Example:
-
-[[[1, 2],[3, 4]],[[5, 6],[7, 8]]]
-
-Indexing:
-
-arr[1][0][1] → 6
-
-Used for: videos (frames × height × width), 3D space data.
-
-⸻
-
-4️⃣ N-Dimensional Array
-
-When the number of dimensions is N, where N can be any positive integer.
-
-Examples:
-	•	4D → time × channel × height × width
-	•	5D → batch × time × channel × height × width
-	•	ND → used in machine learning, scientific computing, simulations
-
-⸻
-
-Real-World Example (Python – NumPy)
+1D Array
 
 import numpy as np
 
-a = np.array([[[1, 2], [3, 4]],[[5, 6], [7, 8]]])
-
-print(a.shape)  # (2, 2, 2) → 3D array
-
-
-⸻
-
-Summary
-
-Dimension	Name	Example Use
-1D	Vector	List of numbers
-2D	Matrix	Table, image
-3D	Tensor	Video, 3D data
-ND	Tensor	ML, AI, scientific data
+a = np.array([1, 2, 3, 4, 5, 6])
+print(a)
 
 
 ⸻
 
-If you want, I can explain this with diagrams, or in C / Java / Go, or for interview preparation (since you’re preparing for interviews).
+2D Array
+
+b = np.array([[1, 2, 3],[4, 5, 6]])
+print(b)
+
+
+⸻
+
+3D Array
+
+c = np.array([[[1, 2, 3],[4, 5, 6]]])
+print(c)
+
+
+⸻
+
+2️⃣ Array Properties
+
+a.ndim    # number of dimensions
+a.shape   # shape of array
+a.size    # total elements
+a.dtype   # data type
+
+
+⸻
+
+3️⃣ Normal Slicing (Like Python Lists)
+
+⸻
+
+1D Slicing
+
+a = np.array([10, 20, 30, 40, 50])
+
+a[0]      # 10
+a[1:4]    # [20 30 40]
+a[-1]     # 50
+
+
+⸻
+
+2D Slicing
+
+b = np.array([[1, 2, 3],[4, 5, 6]])
+
+b[0]        # [1 2 3]
+b[1, 2]     # 6
+b[:, 1]     # [2 5]
+
+
+⸻
+
+3D Slicing
+
+c = np.array([[[1, 2],[3, 4]],[[5, 6],[7, 8]]])
+
+c[0]           # 2D block
+c[0, 1]        # [3 4]
+c[1, 0, 1]     # 6
+
+
+⸻
+
+4️⃣ Reshaping Arrays
+
+⸻
+
+1D → 2D
+
+a = np.array([1, 2, 3, 4, 5, 6])
+a2 = a.reshape(2, 3)
+print(a2)
+
+
+⸻
+
+2D → 3D
+
+a3 = a.reshape(1, 2, 3)
+print(a3)
+
+
+⸻
+
+1D → 4D
+
+a4 = np.array(range(16)).reshape(2, 2, 2, 2)
+print(a4)
+
+
+⸻
+
+Automatic Reshape using -1
+
+x = np.array([1,2,3,4,5,6,7,8])
+y = x.reshape(2, -1)
+print(y)
+
+
+⸻
+
+5️⃣ Slicing After Reshape (Very Important)
+
+d = np.array(range(16)).reshape(2, 2, 2, 2)
+
+d[0]            # 3D array
+d[0, 1]         # 2D array
+d[0, 1, 0]      # 1D array
+d[0, 1, 0, 1]   # single element
+
+
+⸻
+
+6️⃣ Golden Rule of Indexing
+
+arr[i][j][k][l]  ==  arr[i, j, k, l]
+
+
+⸻
+
+7️⃣ Common Mistakes ❌
+
+a.reshape(2, 4)   # ❌ if total elements don't match
+a[0[1]]           # ❌ wrong bracket usage
+
+
+⸻
+
+8️⃣ Quick Summary Table
+
+Dimension	 Name	  Example
+1D.      	Vector	  [1,2,3]
+2D	        Matrix	  [[1,2],[3,4]]
+3D+	        Tensor	   ML, AI, 
+
+
+
+⸻
+
+📘 NumPy Array Initialization
+
+⸻
+
+1️⃣ Using np.array() (Manual Initialization)
+
+import numpy as np
+
+a = np.array([1, 2, 3, 4])
+b = np.array([[1, 2], [3, 4]])
+c = np.array([[[1, 2], [3, 4]]])
+
+
+⸻
+
+2️⃣ Initialize with Zeros
+
+np.zeros(5)          # 1D
+np.zeros((2, 3))      # 2D
+np.zeros((2, 2, 2))   # 3D
+
+
+⸻
+
+3️⃣ Initialize with Ones
+
+np.ones(4)
+np.ones((3, 3))
+np.ones((2, 2, 2))
+
+
+⸻
+
+4️⃣ Initialize with Constant Value
+
+np.full((2, 3), 7)
+
+
+⸻
+
+5️⃣ Identity Matrix
+
+np.eye(3)     # 3x3 identity matrix
+
+
+⸻
+
+6️⃣ Range Initialization
+
+Using arange()
+
+np.arange(10)
+np.arange(1, 10, 2)
+
+
+⸻
+
+Using linspace()
+
+np.linspace(0, 1, 5)
+
+
+⸻
+
+7️⃣ Random Initialization
+
+Random floats (0 to 1)
+
+np.random.rand(3, 3)
+
+
+⸻
+
+Random integers
+
+np.random.randint(1, 10, (2, 3))
+
+
+⸻
+
+Normal distribution
+
+np.random.randn(3, 3)
+
+
+⸻
+
+8️⃣ Empty Array (Fast, garbage values)
+
+np.empty((2, 3))
+
+
+⸻
+
+9️⃣ Like Another Array
+
+a = np.array([[1, 2], [3, 4]])
+
+np.zeros_like(a)
+np.ones_like(a)
+np.full_like(a, 9)
+
+
+⸻
+
+🔟 Initialize then Reshape
+
+a = np.arange(12).reshape(3, 4)
+
+
+⸻
+
+1️⃣1️⃣ Data Type Initialization
+
+np.array([1, 2, 3], dtype=float)
+np.zeros((2, 2), dtype=int)
+
+
+⸻
+
+✅ Summary Table
+
+Method	Use -
+
+np.array()	manual values
+zeros()	     initialize with 0
+ones()	     initialize with 1
+full()	     constant value
+eye()	     identity matrix
+arange()	 range
+linspace()	 evenly spaced
+rand()	     random floats
+randint()	 random ints
+empty()	     fast allocation
+ 
+
