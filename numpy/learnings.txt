@@ -1,0 +1,169 @@
+Numpy ->
+- it stands for numeric python 
+- An open-source python library built using python and C. 
+- NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
+
+- NumPy arrays have a fixed size at creation, unlike Python lists (which can grow dynamically). Changing the size of an ndarray will create a new array and delete the original.
+
+
+Sequential and Non- Sequential Datatypes->
+
+1. Sequential -> Sequential data types are ordered collections of elements that can be accessed using an index. The primary built-in sequence types are lists, tuples, and strings. Other types include range objects, bytes, and bytearray. 
+
+    1. Lists (list)
+        -Lists are the most versatile and widely used sequence type. 
+        -Mutability: Mutable (can be modified after creation).
+        -Definition: Created using square brackets [].
+        -Contents: Can store elements of different data types (heterogeneous), including other lists.
+        -Use Cases: General-purpose data storage, stacks, queues, and any scenario where elements need to be added, removed, or changed dynamically. 
+
+        my_list = [1, "hello", 3.14, [4, 5]]
+        my_list.append("world") # Modifying the list
+        print(my_list[1])      # Accessing by index: "hello"
+
+
+    2. Tuples (tuple)
+        -Tuples are similar to lists but are "immutable", meaning their contents cannot be changed after creation. 
+        -Mutability: Immutable (cannot be modified).
+        -Definition: Created using parentheses () (or just commas).
+        -Contents: Can also store heterogeneous elements.
+        -Use Cases: Storing data that should not change (e.g., coordinates, database records), returning multiple values from a function, and as keys in dictionaries (lists cannot be dictionary keys because they are mutable). 
+
+
+        my_tuple = (1, "hello", 3.14)
+        # my_tuple[1] = "world" # This would raise a TypeError
+        print(my_tuple[0])       # Accessing by index: 1
+
+
+    3. Strings (str) 
+        -Strings are sequences of characters used for storing text. 
+        -Mutability: Immutable.
+        -Definition: Created using single quotes '', double quotes "", or triple quotes """ """.
+        -Contents: Stores data of the str type.
+        -Use Cases: Text processing, user interaction, data manipulation. Operations like concatenation create a new string rather than modifying the original. 
+
+
+        my_string = "Hello, World!"
+        # my_string[0] = "J" # This would raise a TypeError
+        print(my_string[0])    # Accessing by index: "H"
+
+    4.Other Sequence Types
+        -range: Represents an immutable sequence of numbers, primarily used for looping a specific number of times (e.g., range(0, 10)). It is memory-efficient as it generates numbers on demand.
+
+        -bytes and bytearray: These handle binary data. bytes is an immutable sequence of small integers (0-255), while bytearray is its mutable counterpart. 
+
+2. Non-sequential->The primary non-sequential (unordered) data types in Python are dictionaries, sets, and frozensets. These data types do not maintain a specific order for their elements, unlike sequence types such as lists and tuples.
+
+    1.Dictionaries (dict): Dictionaries are collections of key-value pairs.
+       - They are unordered, though as of recent Python versions, they maintain insertion order in CPython implementation.
+       - Elements are accessed using their unique keys (which must be immutable types like strings or numbers), not by an index.
+       - They are mutable, meaning you can add, remove, and change key-value pairs after creation.
+       - Example: my_dict = {"name": "Max", "age": 25, "city": "Berlin"}
+
+    2.Sets (set): Sets are unordered collections of unique elements.
+       - They do not allow duplicate items and are ideal for membership testing and removing duplicates from a sequence.
+       - Sets are mutable.
+       - Example: unique_numbers = {1, 2, 3, 4, 5}
+
+    3.Frozensets (frozenset): Frozensets are immutable versions of sets.
+       - Once a frozenset is created, its elements cannot be changed, added, or removed.
+       - Example: frozen_set = frozenset([1, 2, 3, 4, 5])         
+
+Features of Numpy - 
+
+1. N-dimensional array - multi dimensional array.
+  0-dimensional aaray - scaler
+  1-dimensional array - vector
+  2-dimensional arrat - Matrix
+  3-dimensional array - Tensor
+  .
+  ..... - Al are tensor 
+
+  An N-dimensional array is a data structure that stores elements in N dimensions (or axes) instead of just one or two.
+
+You can think of it as a generalization of 1D and 2D arrays.
+
+⸻
+
+1️⃣ 1D Array (1-Dimensional)
+
+A simple list of elements.
+
+Example:
+
+[1, 2, 3, 4]
+
+Indexing:
+
+arr[0], arr[1], arr[2] ...
+
+Used for: lists, sequences, vectors.
+
+⸻
+
+2️⃣ 2D Array (2-Dimensional)
+
+An array of arrays (rows and columns) → like a matrix.
+
+Example:
+
+[[1, 2, 3],[4, 5, 6]]
+
+Indexing:
+
+arr[0][1] → 2
+
+Used for: tables, grids, matrices, images (height × width).
+
+⸻
+
+3️⃣ 3D Array (3-Dimensional)
+
+An array of 2D arrays → like a cube.
+
+Example:
+
+[[[1, 2],[3, 4]],[[5, 6],[7, 8]]]
+
+Indexing:
+
+arr[1][0][1] → 6
+
+Used for: videos (frames × height × width), 3D space data.
+
+⸻
+
+4️⃣ N-Dimensional Array
+
+When the number of dimensions is N, where N can be any positive integer.
+
+Examples:
+	•	4D → time × channel × height × width
+	•	5D → batch × time × channel × height × width
+	•	ND → used in machine learning, scientific computing, simulations
+
+⸻
+
+Real-World Example (Python – NumPy)
+
+import numpy as np
+
+a = np.array([[[1, 2], [3, 4]],[[5, 6], [7, 8]]])
+
+print(a.shape)  # (2, 2, 2) → 3D array
+
+
+⸻
+
+Summary
+
+Dimension	Name	Example Use
+1D	Vector	List of numbers
+2D	Matrix	Table, image
+3D	Tensor	Video, 3D data
+ND	Tensor	ML, AI, scientific data
+
+
+⸻
+
+If you want, I can explain this with diagrams, or in C / Java / Go, or for interview preparation (since you’re preparing for interviews).
