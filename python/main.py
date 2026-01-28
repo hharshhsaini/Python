@@ -579,7 +579,6 @@
 
 
 
-
 # print(pallindrome())
 # pallindrome("CURSOR")
 
@@ -588,22 +587,61 @@
 
 # print(hello())
 
+"""""""""""""""""""""""""Data structures"""""""""""""""""""""""""
+
+'''Key Words'''
+    # 1.Mutable - mutability refers to whether an objects value can be changed after creation. And list allow this.
+    # 2.Duplicates - we know data structures are used to store multiple value so duplicates means same value occuring multiple time. List allows this.
+    # 3.Ordered - List maintains ordered data structures maintains the sequence of elements as they were inserted. This means you can access elements using their position(index).
+    # 4.Heterogenous - list have heterogenous nature that means we can have multiple data types inside the list. 
+
 '''LIST'''
 # a = [12,13,14,15,16,34.5]
 
 # a = ["a",1,[1,3],True]
 # print(a[2][0])
 
+# Loop in LISTS - 
 
 # #1st way using index
-
 # for i in range(len(a)):
 #     print(a[i])
 
 # #2nd way directly on values
-
 # for i in a:
 #     print(i)
+
+# print(dir(list)) - this gives the methods performed in list.
+# help(list) - this is used to learn about any method.
+
+'''Methods in list'''
+# a=[1,2,4,3]
+# b=[3,4]
+# a.extend(b) - it is used to extend a list with another list.
+# print(a)
+# a.append(3) - it will add 3 in last of the list.
+# print(a)
+# a.pop("index of number") - it is used to remove the number from list whose index you are giving.
+# print(a)
+# a.insert(2,4) - it will add "4" on 2nd index.
+# print(a)
+# a.remove(3) - it is used to remove the first "3" in list.
+# print(a)
+# a.sort() - sort the list in ascending order.
+# print(a)
+# b = a.index(6) - it will tell the index of number "6" in the list.
+# print(b)
+# b = a.count(5) - it will find the count of number "5" that how much time "5" is occuring in list.
+# print(b)
+# a.reverse() - it will reverse the list order.
+# b = a.copy() - it will create a copy of the list.
+# a =""
+# b=bool(a)
+# print(b)
+
+'''''''''''''''Questions'''''''''''''''
+
+# --------------Finding positive and negative numbers------------
 
 # l = [-45,67,12,-68,-69,34]
 
@@ -617,6 +655,8 @@
 #     if i < 0:
 #         print(i)
 
+#-----------------Finding Mean of List----------------------
+
 # l = [12,435,67,89,23,25,69]
 # s = len(l)
 # print(s)
@@ -627,12 +667,9 @@
 
 # print(sum/len(l))
 
-
-
-
+# --------------------Findiing largest number---------------
 
 # l = [12,567,43,235,347,568,45,7]
-
 # largest = l[0]
 # index = 0
 
@@ -643,6 +680,7 @@
 
 # print(f"your largest number is {largest} at index {index}")
 
+# --------------Finding second largest number----------------
 
 # def findsecondlargestandlargest(l):
 #     sec_largest = l[0]
@@ -656,28 +694,10 @@
 #     return largest , sec_largest
 # print(findsecondlargestandlargest([1,6,0,7,4,8,9,10]))
 
-# a=[1,2,4,3]
-# b=[3,4]
-# a.extend(b)
-# print(a)
-# a.append(3)
-# print(a)
-# a.pop()
-# print(a)
-# a.insert(2,4)
-# print(a)
-# a.remove(3)
-# print(a)
-# a.sort()
-# print(a)
-# a =""
-# b=bool(a)
-# print(b)
-
 
 # a = [12,13,18,15,16]
 
-# for i in range(len(a)-1):
+# for i in range(len(a)-1): 
 #     if a[i] < a[i+1]:
 #         continue
 #     else:
