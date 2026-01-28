@@ -681,7 +681,7 @@
 # print(f"your largest number is {largest} at index {index}")
 
 # --------------Finding second largest number----------------
-
+# l = [1,16,17,15,19,18]
 # def findsecondlargestandlargest(l):
 #     sec_largest = l[0]
 #     largest = l[0]
@@ -692,9 +692,11 @@
 #         elif i > sec_largest:
 #             sec_largest = i
 #     return largest , sec_largest
+
+ 
 # print(findsecondlargestandlargest([1,6,0,7,4,8,9,10]))
 
-
+#-------------checking if list is sorted---------------
 # a = [12,13,18,15,16]
 
 # for i in range(len(a)-1): 
