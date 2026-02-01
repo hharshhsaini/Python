@@ -710,6 +710,12 @@
 
 """Tuple"""
 
+'''Terminology'''
+# 1. immutable - we cannot change the values of a tuple.
+# 2. Duplicates - we can make duplicates.
+# 3. ordered - set are ordered and can be accessed by indexing.
+# 4. Heterogeneous - tuples can have diffrenet type of data structures.
+
 # a = (1,2,3,4,5,5,5.5,print(),"hello")
 
 # count = a.count(5)
