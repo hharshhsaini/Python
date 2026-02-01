@@ -720,13 +720,19 @@
 
 # count = a.count(5)
 # print(count)
+# index = a.index()
+# print(index)
 
+# tuple unpacking - 
+# a,b,c,d = (1,2,3,4)
+# print(a)
 
 # a = (1,)
 
 # print(type(a))
+# - yaha ye comma lagate hi tuple bangaya , wrna ye ek integer hi rehta.
 
-
+"""SETS"""
 
 # a = {1,8,9,"hello",2,3,4,5}
 
