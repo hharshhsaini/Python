@@ -734,24 +734,48 @@
 
 """SETS"""
 
+'''Terminologies'''
+# -mutable
+# -Duplicates
+# -Unordered - sets are unordered and can't be accessed from their index values.
+# -Heterogenous
+
+# - Each value in a set is hashed useing a hash function (hash()in python).
+# - the hash is used as an index to store the element in memory.
+# - since hashing does not maintain order, sets are unordered.
+# - Only immutable(hashable) objects can be stored in a set(e.g. numbers, strings, tuples). Mutable objects like lists and dictionaries are not allowed.
+
+# NOTE - 
+# Set Traversing-
+#  - A set cannot be traversed using the index values cause it is unordered and has no index . 
+#  - So many times it will give random values.
+
+#traversing is shown below - 
 # a = {1,8,9,"hello",2,3,4,5}
 
 # for i in a:
 #     print(i)
 
+
 # a = {8,1,2,3,4}
 
-# a.clear()
-
+# a.clear() - it removes all elements.
+# a.remove(2) - it will remove "2" from the set.
 # print(a)
-
+# a.pop() - it will randomly remove a value from the set.
 
 # a = {1,2,3,4,5}
 # b = {4,5,6,7,8}
 
-# b -= a
+#for union of both a and b = a.union(b) orr  a|b
+#for intersection of a and b = a.intersection(b) orr a&b
+#for difference of a and b = a.difference(b) orr a-b
+#for symmentric difference = b^a
 
+# b -= a (compound operation)
 # print(b)
+
+"""Dictionaries"""
 
 # d = {10:100,20:200,30:300,40:400}
 
