@@ -873,13 +873,31 @@
 #         d1[i] = d2[i]
 # print(d1)
 
+
+"""Exception Handling"""
+
+'''Errors'''
+
+# - SyntaxError 
+# - IndentationError : Spaces ache se use nahi krne k karn aata hai.
+# - TabError
+
+# Exceptions - Exceptions are unexpected events or erorr that occurs during the execution of the program, which disrupts the normal flow of the program.
+#  Try : wrap the block of cpde that might cause an exception(try     statement must have at least one except or finally clause). 
+#  Except : Handel the execption if it occurs 
+#  else : Run code only if no exception ocurs 
+#  finally : Run code no matter what, whether there's an exception or not 
+#  raise : Manually throw an exception 
+
+# Example - 
+
 # a = int(input("tell your number :- "))
 
 # try:
 #     print(10/a)
 
 # except Exception as err:
-#     print(f"sorry there is an err as {err}")
+#     print(f"sorry there is an err as {err}") 
 
 # else:
 #     print("good there is no exception")
@@ -887,7 +905,7 @@
 # finally:
 #     print("i will run no matter what")
 
-
+ 
 # print("ok i have done the division")
 
 
@@ -908,7 +926,8 @@
 
 # print("the club will start soon")
 
-#File handling
+
+"""FILE handling"""
 
 # r = open("superman.txt",'a')
 
