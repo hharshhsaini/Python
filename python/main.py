@@ -777,6 +777,13 @@
 
 """Dictionaries"""
 
+'''Terminologies'''
+# -mutable 
+# -Duplicate : Keys must be unique, but you can have duplicates in keys .
+# -Order : Dictionary follows insertion order. 
+# -heterogeneous
+  
+
 # d = {10:100,20:200,30:300,40:400}
 
 # d[10] = 100 #updating
@@ -786,11 +793,42 @@
 # print(d)
 
 
-
-
 # d = {10:100,20:200,30:300,40:400}
+# for i in d.values():
+#     print(i) # this will be giving direct values of dictionary 
 
-# print(d.items())
+# for i in d:
+#     print(d[i]) # another method to get the values of dictionary
+
+# for i in d:
+#     print(i) # to print the Keys 
+ 
+# print(d.items()) # ths is used to print both the keys and valus of the keys.
+
+# help(dict) : this is used to see the actions performed in dictionaries.
+#  - help  k andar bhot saare methods milenge , unko try kr skte hai .
+#  
+# d.clear() - used to clear dictionary .
+
+
+
+#NOTE - 
+# a = [1,2,3,4,5]
+# b = a 
+
+# b[0] = 100
+# print(a) - abb yaha kya hoga ki ye banegi DEEP COPY (matlab jab tuum b(copy) me chnages kroge to wo main bhi changes honge.) us se bach ne k liye use krenge (SHALLOW COPY).
+
+# a = [1,2,3,4,5]
+# b = a.copy()
+# b[0] = 100
+
+# print(a) - abb yaha "a" me koi changes nahi honge. 
+
+# ( Orr ye same chiz follow hoti hai Dictionaries me.)
+
+
+# ----------------------Merginng two python Dictionaries---------------------
 
 # d1 = {10:100,20:200,40:300}
 # d2 = {40:400,50:500,60:600}
@@ -801,6 +839,8 @@
 
 # print(d1)
 
+#------------------------Sum of values of dictionary--------------------------
+
 # d1 = {10:100,20:200,40:300}
 # sum = 0
 
@@ -809,18 +849,19 @@
 
 # print(sum)
 
+#----------------Count the frequency of each element in List------------------
 
 # a = [1,1,1,2,2,2,3,3,3,4,4,4,5,5,6,7,8]
 
 # d = {}
 # for i in a:
 #     if i in d.keys():
-#         d[i] +=1 
+#         d[i] +=1   # this will chek wheather a key with name "i" is there , if yes than it will add its value by 1.
 #     else:
-#         d[i] = 1
-
+#         d[i] = 1  # if there is not any key named "i" than it will create a key with name "i" and give its value 1.
 # print(d)
 
+ # ---------Merging of 2 dictionaries , but adding the values of common keys----------
 
 # d1 = {10:100,20:200,40:300}
 # d2 = {40:400,50:500,60:600}
@@ -830,8 +871,7 @@
 #         d1[i] += d2[i]
 #     else:
 #         d1[i] = d2[i]
-
-
+# print(d1)
 
 # a = int(input("tell your number :- "))
 
