@@ -929,6 +929,13 @@
 
 """FILE handling"""
 
+# What are files :
+# - any name with extension (.py , .txt , .mp3 etc) and when we want to handel these files , we will use file handling.
+
+# File handling: 
+# - File handling means creating, reading, Updating, Deleting(CURD) operations that. we can perform in files.
+# - We have to open() function to open a file. in python.
+
 # r = open("superman.txt",'a')
 
 # r.write("and now I am appending some content inside the file  ")
@@ -1857,3 +1864,5 @@
 # # Using symmetric_difference_update() (modifies set_a in-place)
 # set_a.symmetric_difference_update(set_b)
 # print(f"Set A after update: {set_a}")
+
+
