@@ -1866,3 +1866,130 @@
 # print(f"Set A after update: {set_a}")
 
 
+# Search insert position -
+
+# - All elements are UNique.
+# - Array is Sorted.
+
+# def searchInsert(nums, target):
+#     n = len(nums)
+#     lb = n
+    
+#     low, high = 0, n - 1
+
+#     while low <= high:
+#         mid = (low + high) // 2
+
+#         if nums[mid] >= target:
+#             lb = mid
+#             high = mid - 1
+#         else:
+#             low = mid + 1
+#     return lb
+#  
+# TC - O(log2(n))
+# SC - O(1)
+
+# Linear search -
+
+# def linear_search(nums, target):
+#     for i in range(len(nums)):
+#         if nums[i] == target:
+#             return i
+#     return -1
+
+# TC - O(N)
+# SC - O(1)
+
+#selection Sort -
+
+# nums = [1,7,3,9,3,5,6,2]
+# def selection_sort(nums):
+#     n = len(nums)
+#     for i in range(0,n):
+#         min = i 
+#         for j in range(i+1,n):
+#             if nums[j]< nums[min]:
+#                 min = j
+#         nums[i],nums[min] = nums[min],nums[i]
+#     return nums
+# print(selection_sort(nums))
+
+# TC - O(n^2)
+# SC - O(1)
+      
+# Bubble sort
+ 
+# nums = [1,7,3,9,3,5,6,2]
+# n = len(nums)
+# for i in range(0,n):
+#     for j in range(0,i+1):
+#         if nums[j] > nums[j+1]:
+#             nums[j],nums[j+1] = nums[j+1],nums[j]
+
+# TC - O(n^2)
+# SC - O(1)
+
+# Insertion Sort -
+
+# nums = [1,7,3,9,3,5,6,2]
+# n = len(nums)
+# for i in range(i,n):
+#     key = nums[i]
+#     j = i - 1
+#     while j >= 0 and nums[j] > key:
+#         nums[j+1] = nums[j]
+#         j -= 1
+
+# TC - O(n^2)
+# SC - O(1)
+
+# Delete element from an array at a position -
+
+# def delete(arr, pos):
+#     n = len(arr)
+
+#     if pos < 0 or pos >= n:
+#         return "Invalid position"
+
+#     for i in range(pos, n - 1):
+#         arr[i] = arr[i + 1]
+
+#     arr.pop()
+#     return arr
+
+# TC - O(n)
+# SC - O(1)
+
+# Middle of linkedlist - 
+
+# class Node:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+
+
+# def find_middle(head):
+#     count = 0
+#     temp = head
+
+#     # First pass: count nodes
+#     while temp:
+#         count += 1
+#         temp = temp.next
+
+#     # Second pass: reach middle
+#     temp = head
+#     for _ in range(count // 2):
+#         temp = temp.next
+
+#     return temp.data
+
+# TC - O(n)
+# SC - O(1)
+
+
+
+
+
+
